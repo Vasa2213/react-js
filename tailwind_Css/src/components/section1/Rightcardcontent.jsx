@@ -20,7 +20,7 @@ const Rightcardcontent = (props) => {
             style={{ backgroundColor: props.color }}
             className=" text-white px-4 py- rounded-full"
           >
-            <i class="ri-arrow-right-line"></i>
+            <i className="ri-arrow-right-line"></i>
           </button>
         </div>
       </div>

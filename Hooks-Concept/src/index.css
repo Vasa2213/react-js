@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+html,body{
+    height:100% ;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+h1{
+    padding: 10px 80px;
+    margin: 20px;
+    background-color: rgb(179, 177, 177);
+    width: fit-content;
+    font-size: 80px;
+    border-radius: 10px;
+}
+button{
+    padding: 10px 20px;
+    margin: 20px;
+}
+input{
+     padding: 10px 20px;
+    margin: 20px;
+}

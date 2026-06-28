@@ -1,0 +1,7 @@
+@import "tailwindcss";
+#msg::-webkit-scrollbar{
+  display: none;
+}
+#cardScroll::-webkit-scrollbar{
+  display: none;
+}

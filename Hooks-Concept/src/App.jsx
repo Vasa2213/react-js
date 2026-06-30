@@ -1,17 +1,12 @@
-import React from 'react'
 import States from './components/states'
 import StatesAdv from './components/StatesAdv'
 import Formhandling from './components/Formhandling'
-
+import Apicall from './components/Apicall';
 const App = () => {
+  
   return (
     <div>
-      <States/>
-      <hr></hr>
-      <StatesAdv/>
-      <hr></hr>
-      <h2>Form Handling</h2>
-      <Formhandling/>
+      <Apicall/>
       </div>
       
   )

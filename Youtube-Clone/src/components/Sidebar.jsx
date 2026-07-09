@@ -1,22 +1,75 @@
-const Sidebar = () => {
-  return (
-    <div className="w-1/22">
-      <div className="flex flex-col text-3xl gap-6 items-center mt-10">
-        <i class="ri-home-line">
-          <p className="text-sm font-medium">Home</p>
-        </i>
-        <i class="ri-video-line">
-          <p className="text-sm font-medium">Shorts</p>
-        </i>
-        <i class="ri-cloud-fill">
-          <p className="text-sm font-medium">Join</p>
-        </i>
-        <i class="ri-user-line">
-          <p className="text-sm font-medium">You</p>
-        </i>
-      </div>
-    </div>
-  );
+import SidebarItem from './SidebarItem';
+import {
+	Home,
+	PlaySquare,
+	Bell,
+	History,
+	ListVideo,
+	Clock,
+	ThumbsUp,
+	Flame,
+	Music,
+	Gamepad2,
+} from 'lucide-react';
+const Sidebar = ({ isSidebaropen, setisSidebaropen }) => {
+	console.log(isSidebaropen);
+	return (
+		<aside className={`p-3 ${isSidebaropen ? 'w-50' : 'w-20'}`}>
+			<div className="space-y-1">
+				<SidebarItem
+					icon={<Home />}
+					text="Home"
+					isSidebaropen={isSidebaropen}
+				/>
+				<SidebarItem
+					icon={<PlaySquare />}
+					text="Shorts"
+					isSidebaropen={isSidebaropen}
+				/>
+				<SidebarItem
+					icon={<Bell />}
+					text="Subscriptions"
+					isSidebaropen={isSidebaropen}
+				/>
+			</div>
+
+			<hr className="my-3" />
+
+			<h3 className="px-3 mb-2 text-sm font-semibold">You</h3>
+
+			<div className="space-y-1">
+				<SidebarItem
+					icon={<History />}
+					text="History"
+					isSidebaropen={isSidebaropen}
+				/>
+				<SidebarItem
+					icon={<Clock />}
+					text="Watch Later"
+					isSidebaropen={isSidebaropen}
+				/>
+			</div>
+			<hr className="my-3" />
+
+			<div title="Explore">
+				<SidebarItem
+					icon={<Flame />}
+					text="Trending"
+					isSidebaropen={isSidebaropen}
+				/>
+				<SidebarItem
+					icon={<Music />}
+					text="Music"
+					isSidebaropen={isSidebaropen}
+				/>
+				<SidebarItem
+					icon={<Gamepad2 />}
+					text="Gaming"
+					isSidebaropen={isSidebaropen}
+				/>
+			</div>
+		</aside>
+	);
 };
 
 export default Sidebar;

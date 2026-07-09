@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 #over::-webkit-scrollbar {
-  display: none;
+	display: none;
 }

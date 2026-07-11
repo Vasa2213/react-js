@@ -1,0 +1,34 @@
+@import 'tailwindcss';
+.container {
+	height: 80%;
+	display: grid;
+	grid-template-columns: 5% 60% 35%;
+	grid-template-rows: 8% 1fr 1fr 1fr;
+}
+.sidebar {
+	background-color: royalblue;
+	grid-row: 1/5;
+}
+.search-bar {
+	background-color: red;
+	grid-column: 2/3;
+	padding: 10px;
+}
+.hero {
+	background-color: aqua;
+	padding: 20px 20px;
+	grid-row: 2/3;
+}
+.day-forcaste {
+	background-color: azure;
+	grid-row: 3/4;
+}
+.air-conditions {
+	background-color: purple;
+	grid-row: 4/5;
+}
+.week-forcaste {
+	background-color: rgb(139, 12, 242);
+	grid-row: 2/5;
+	grid-column: 3/4;
+}

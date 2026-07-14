@@ -1,5 +1,5 @@
 import Airconditongrid from './Airconditongrid';
-const Airconditions = () => {
+const Airconditions = ({data}) => {
 	return (
 		<div className="air-conditions">
 			<div className="flex justify-between px-5 text-lg mb-2">
@@ -8,7 +8,7 @@ const Airconditions = () => {
 					See more
 				</button>
 			</div>
-			<Airconditongrid />
+			<Airconditongrid data={data}/>
 		</div>
 	);
 };

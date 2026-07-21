@@ -3,6 +3,7 @@ import { fetchPhotos } from './api/MediaApi';
 import Homepage from './Pages/Homepage';
 import Collectionpage from './Pages/Collectionpage';
 import Navbar from './components/Navbar';
+import { ToastContainer, toast } from 'react-toastify';
 
 const App = () => {
 	return (
@@ -12,6 +13,7 @@ const App = () => {
 				<Route path="/" element={<Homepage />}></Route>
 				<Route path="/collection" element={<Collectionpage />}></Route>
 			</Routes>
+			<ToastContainer />
 		</div>
 	);
 };

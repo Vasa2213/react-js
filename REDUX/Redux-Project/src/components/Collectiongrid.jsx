@@ -1,14 +1,13 @@
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Loader from './Loader';
-import { addCollection } from '../REDUX/features/collectionSlice';
-
-const ResultCard = ({ item }) => {
+import { removeCollection } from '../REDUX/features/collectionSlice';
+const Collectiongrid = ({ item }) => {
 	const { loading } = useSelector((store) => store.search);
+	const collection = useSelector((state) => state.collection.items);
 	const dispatch = useDispatch();
-	function addedToCollection(item) {
-		dispatch(addCollection(item));
-		// dispatch(addedToast());
-	}
+	const removeFromCollection = (item) => {
+		dispatch(removeCollection(item.id));
+	};
 	return (
 		<div className="w-[18vw] h-80  rounded-3xl  relative overflow-hidden">
 			<div className="w-full h-full">
@@ -52,13 +51,13 @@ const ResultCard = ({ item }) => {
 				<button
 					className="bg-(--c3) px-3 py-2 rounded cursor-pointer active:scale-95 text-(--c1)"
 					onClick={() => {
-						addedToCollection(item);
+						removeFromCollection(item);
 					}}>
-					Save
+					Remove
 				</button>
 			</div>
 		</div>
 	);
 };
 
-export default ResultCard;
+export default Collectiongrid;
